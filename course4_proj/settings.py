@@ -72,6 +72,7 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'movies',
+        'gh',
     ]
 
     MIDDLEWARE = [

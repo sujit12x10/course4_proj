@@ -165,3 +165,7 @@ class Dev(Configuration):
     DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
     OMDB_KEY = "45b7dcdd"
+
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+    ADMINS = [("Ben", "ben@example.com")]

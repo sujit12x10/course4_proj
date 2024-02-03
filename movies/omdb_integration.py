@@ -50,7 +50,7 @@ def search_and_save(search):
     search_term, created = SearchTerm.objects.get_or_create(term=normalized_search_term)
 
     if not created and (search_term.last_search > now() - timedelta(days=1)):
-        # Don't search as it has been searched recently
+        #Don't search as it has been searched recently
         logger.warning(
             "Search for '%s' was performed in the past 24 hours so not searching again.",
             normalized_search_term,

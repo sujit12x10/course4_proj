@@ -73,7 +73,11 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
         'movies',
         'gh',
+        'django_celery_results',
     ]
+
+    CELERY_RESULT_BACKEND = "django-db"
+    CELERY_BROKER_URL = "redis://localhost:6379/0"
 
     MIDDLEWARE = [
         'django.middleware.security.SecurityMiddleware',
@@ -160,4 +164,4 @@ class Dev(Configuration):
 
     DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-    OMDB_KEY = "44e7c494"
+    OMDB_KEY = "45b7dcdd"
